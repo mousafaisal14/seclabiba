@@ -14,8 +14,8 @@ public class New {
 		System.setProperty("webdriver.chrome.driver", "C:\\driverr\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
-		String email = "mousafaisal@labiba.ai";
-		String pass = "Labiba@123";
+		String email = "";
+		String pass = "";
 
 		driver.get("https://chat.labibabot.com");
 		driver.manage().window().maximize();
