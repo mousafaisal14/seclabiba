@@ -1,0 +1,24 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class New {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\driverr\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+		String email = "mousa@labiba.ai";
+		String pass = "Labiba@123";
+		
+		
+		driver.get("https://chat.labibabot.com");
+		driver.findElement(By.id("Input_Email")).sendKeys(email);
+		driver.findElement(By.id("Input_Password")).sendKeys("Labiba@123");
+		
+		
+		
+		
+	}
+
+}

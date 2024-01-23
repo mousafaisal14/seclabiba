@@ -1,0 +1,32 @@
+package auth;                                         // --do not use the default package
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class New {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\driverr\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+		String email = "mousafaisal@labiba.ai";
+		String pass = "Labiba@123";
+
+		driver.get("https://chat.labibabot.com");
+		driver.manage().window().maximize();
+		//driver.manage().window().fullscreen();// --this to make the window full screen  and should be after the get screen 
+
+		
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@id='Input_Email']")).sendKeys(email);
+		driver.findElement(By.id("Input_Password")).sendKeys(pass);
+		driver.findElement(By.tagName("button")).click();
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//*[@id=\"chatLink\"]/span[1]")).click();
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//*[@id=\"side-menu\"]/li[2]/ul/li[2]/a")).click();
+	}
+
+}
